@@ -17,7 +17,9 @@ var arr = [10,20,30];
   Return the first item in the given array.
 */
 
-//Code Here
+function first(arr){
+  return arr[0]
+};//Code Here
 
 
 
@@ -32,7 +34,9 @@ var arr = [40,50,60];
   Return the last item in the given array.
 */
 
-//Code Here
+function last(arr){
+  return arr[arr.length-1]
+}//Code Here
 
 
 
@@ -47,7 +51,11 @@ var family = ['Tyler', 'Jordyn', 'Ryan', 'Chelsey', 'Ireland'];
   Loop through the given array and alert every item in the array.
 */
 
-//Code Here
+function looper(family){
+  for (i=0;i<family.length;i++){
+    alert(family[i])
+  }
+}//Code Here
 
 
 
@@ -62,7 +70,11 @@ var letters = ['A', 'B', 'C', 'D', 'E'];
   Loop through the given array backwards alerting every item in the array starting at the end.\
 */
 
-//Code Here
+function reversedLooper(letters){
+  for(i=letters.length-1;i>=0;i--){
+    alert(letters[i])
+  }
+}//Code Here
 
 
 
@@ -77,7 +89,14 @@ var nums = [1,2,3,6,22,98,45,23,22,12];
   Return an array that contains the even numbers from the nums array.
 */
 
-//Code Here
+function evenFinder(nums){
+  var newArray = [];
+  for(i=0;i<nums.length;i++){
+    if(nums[i]%2==0){
+      newArray.push(nums[i])
+    } 
+  } return newArray
+}//Code Here
 
 
 
@@ -105,7 +124,17 @@ var numbersArray = [1,2,34,54,55,34,32,11,19,17,54,66,13];
   Have divider return an Array with the first item in the array being the evens array (all the even values from numbersArray) and the second item in the Array being the odds array (all the odd values from numbersArray).
 */
 
-//Code Here
+function divider(numbersArray){
+  var evensArray = [];
+  var oddsArray =[];
+  for(i=0;i<numbersArray.length;i++){
+    if(numbersArray[i]%2==0){
+      evensArray.push(numbersArray[i])
+    }else{
+      oddsArray.push(numbersArray[i])
+    } 
+  } return [evensArray, oddsArray];
+}//Code Here
 
 
 
@@ -126,7 +155,11 @@ var getRandomArbitrary = function() {
   If it is, return true, if it's not, return false
 */
 
-//Code Here
+function finder(arr){
+  if(arr.includes(getRandomArbitrary())){
+    return true
+  }else {return false}
+}//Code Here
 
 
 
@@ -155,7 +188,15 @@ var myGroceryList = ['chips', 'pizza', 'hotpockets', 'MtnDew', 'corndogs'];
   addItem() --> [];
 */
 
-//Code Here
+function removeItem(myGroceryList,item){
+  for(i=0;i<myGroceryList.length;i++){
+    if(myGroceryList[i]===item){
+      myGroceryList.splice(i,1);
+    } 
+  }      return myGroceryList
+
+};//Code Here
+
 
 
 
